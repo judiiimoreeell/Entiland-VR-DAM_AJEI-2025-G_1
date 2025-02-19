@@ -4,15 +4,13 @@ using UnityEngine;
 
 namespace EntilandVR.DosCinco.DAM_AJEI.G_Uno
 {
-    public class BagonetaLogic : MonoBehaviour
+    public class PuertasLogic : MonoBehaviour
     {
-        // Start is called before the first frame update
         void Start()
         {
 
         }
 
-        // Update is called once per frame
         void Update()
         {
 
