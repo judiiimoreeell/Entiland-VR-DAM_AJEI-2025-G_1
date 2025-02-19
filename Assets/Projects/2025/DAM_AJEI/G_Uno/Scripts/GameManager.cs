@@ -12,7 +12,7 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Uno
         public static GameManager Instance {  get; private set; }
         // Start is called before the first frame update
 
-        public float puntuación;
+        public float puntuación = 0;
         private void Awake()
         {
             if(Instance == null)
@@ -27,13 +27,17 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Uno
         }
         void Start()
         {
-        
+            
         }
 
         // Update is called once per frame
         void Update()
         {
         
+        }
+        public void AddPoints(float points)
+        {
+            puntuación += points;
         }
     }
 }
