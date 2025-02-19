@@ -28,6 +28,7 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Uno {
                 Destroy(gameObject, 1);
                 GameManager.Instance.AddPoints(points);
                 body.useGravity = true;
+                transform.parent = null;
 
             }
         }
