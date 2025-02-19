@@ -6,10 +6,13 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Uno {
 
     public class DianaNormal : MonoBehaviour
     {
+        public float points;
+        bool die;
+        Rigidbody body;
         // Start is called before the first frame update
         void Start()
         {
-        
+            body = GetComponent<Rigidbody>();
         }
 
         // Update is called once per frame
@@ -19,8 +22,14 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Uno {
         }
         public void Damage()
         {
+            if(!die)
+            {
+                die = true;
+                Destroy(gameObject, 1);
+                GameManager.Instance.AddPoints(points);
+                body.useGravity = true;
 
-            Destroy(gameObject);
+            }
         }
     }
 }
