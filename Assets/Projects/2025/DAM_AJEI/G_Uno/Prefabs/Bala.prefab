@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 127765109503398541}
   - component: {fileID: 5443323989387452379}
   - component: {fileID: 2844157437874551674}
+  - component: {fileID: 3966550305666182040}
+  - component: {fileID: 4914621286617905185}
   m_Layer: 0
   m_Name: Mesh
   m_TagString: Untagged
@@ -105,6 +107,39 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!65 &3966550305666182040
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840272269288529492}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.5, y: 1.5, z: 1.5}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4914621286617905185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840272269288529492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45480d7800f9ebb4ba0693ac83732e57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3093494087617987951
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,7 +152,7 @@ GameObject:
   - component: {fileID: 7298740339341716815}
   m_Layer: 0
   m_Name: Bala
-  m_TagString: Untagged
+  m_TagString: Objective
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -136,7 +171,7 @@ Transform:
   m_Children:
   - {fileID: 917727908366944828}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &7298740339341716815
 Rigidbody:

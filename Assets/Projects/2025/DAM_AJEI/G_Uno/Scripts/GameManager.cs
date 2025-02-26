@@ -42,7 +42,11 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Uno
         public void AddPoints(float points)
         {
             puntuación += points;
-            PuntuacionVagoneta.text = puntuación.ToString();
+            if(PuntuacionVagoneta != null)
+            {
+                PuntuacionVagoneta.text = puntuación.ToString();
+
+            }
         }
         public void SubstractPoints(float points)
         {
