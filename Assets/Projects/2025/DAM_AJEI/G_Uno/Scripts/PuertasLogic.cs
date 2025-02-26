@@ -6,7 +6,7 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Uno
 {
     public class PuertasLogic : MonoBehaviour
     {
-        public  GameManager gameManager;
+        
         public Transform puerta;
         public float puntuationDoor1 = 100f;
         public float rotationSpeed = 90f;
@@ -14,12 +14,12 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Uno
 
         void Start()
         {
-            //gameManager = GetComponent<GameManager>();
+            
         }
 
         void Update()
         {
-            if (gameManager.puntuación >= puntuationDoor1 && !isDoorOpen)
+            if (GameManager.Instance.puntuación >= puntuationDoor1 && !isDoorOpen)
             {
                 StartCoroutine(OpenDoor());
                 isDoorOpen = true;
