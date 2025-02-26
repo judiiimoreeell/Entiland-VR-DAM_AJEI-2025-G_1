@@ -891,6 +891,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1178005822}
+  - component: {fileID: 1178005823}
   m_Layer: 0
   m_Name: Vagoneta
   m_TagString: Untagged
@@ -915,6 +916,27 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1178005823
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178005821}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.4238074, y: 1.2636206, z: 2.8809295}
+  m_Center: {x: -0.07569802, y: 0.13181028, z: -0.023200512}
 --- !u!1 &1304398678
 GameObject:
   m_ObjectHideFlags: 0
@@ -944,6 +966,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f3f5ad067527db40bc1f7a80389edc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dianaRota: {fileID: 0}
+  PuntuacionVagoneta: {fileID: 0}
   "puntuaci\xF3n": 200
 --- !u!4 &1304398680
 Transform:
