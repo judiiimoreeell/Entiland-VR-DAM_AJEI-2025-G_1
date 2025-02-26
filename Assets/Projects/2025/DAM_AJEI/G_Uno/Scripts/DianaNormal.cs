@@ -26,6 +26,7 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Uno {
             {
                 die = true;
                 GameObject dr = Instantiate(GameManager.Instance.dianaRota, transform.position, transform.rotation);
+                dr.transform.localScale = gameObject.transform.localScale;
                 //Destroy(dr, 1);
                 GameManager.Instance.AddPoints(points);
                 //body.useGravity = true;
