@@ -10,6 +10,7 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Uno
     {
     
         public static GameManager Instance {  get; private set; }
+        public GameObject dianaRota;
         // Start is called before the first frame update
 
         public float puntuación = 0;

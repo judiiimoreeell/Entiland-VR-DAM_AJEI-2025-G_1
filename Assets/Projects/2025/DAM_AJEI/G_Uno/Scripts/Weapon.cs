@@ -31,12 +31,12 @@ public class Weapon : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(barrelTip.position, barrelTip.forward, out hit, range, layer))
         {
-            var hitBody = hit.transform.GetComponent<Rigidbody>();
-            if (hitBody != null)
+            //var hitBody = hit.transform.GetComponent<Rigidbody>();
+            //if (hitBody != null)
             {
-                Debug.DrawRay(barrelTip.position, (hit.point - barrelTip.position), Color.green, 5);
+                //Debug.DrawRay(barrelTip.position, (hit.point - barrelTip.position), Color.green, 5);
                 //hitBody.GetComponent<Smash>()?.DoSmash();
-                hitBody.AddForceAtPosition((hit.point - barrelTip.position).normalized * hitPower * 10, hit.point, ForceMode.Impulse);
+                //hitBody.AddForceAtPosition((hit.point - barrelTip.position).normalized * hitPower * 10, hit.point, ForceMode.Impulse);
                 
             }
             DianaNormal d = hit.collider.gameObject.GetComponent<DianaNormal>();
