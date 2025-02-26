@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 namespace EntilandVR.DosCinco.DAM_AJEI.G_Uno
@@ -11,6 +12,8 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Uno
     
         public static GameManager Instance {  get; private set; }
         public GameObject dianaRota;
+        [SerializeField] TMP_Text PuntuacionVagoneta;
+
         // Start is called before the first frame update
 
         public float puntuación = 0;
@@ -39,7 +42,12 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Uno
         public void AddPoints(float points)
         {
             puntuación += points;
+            PuntuacionVagoneta.text = puntuación.ToString();
         }
-        
+        public void SubstractPoints(float points)
+        {
+            puntuación -= points;
+            PuntuacionVagoneta.text = puntuación.ToString();
+        }
     }
 }
