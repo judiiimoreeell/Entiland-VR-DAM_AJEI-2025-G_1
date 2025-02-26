@@ -457,6 +457,8 @@ MonoBehaviour:
     m_Bits: 4294967295
   shootSound: {fileID: 8300000, guid: 56b55326d07c3a04c84a9e0cd1ac8dd1, type: 3}
   shootVolume: 1
+  bala: {fileID: 3093494087617987951, guid: 32202120ed446fe44aae0ae4991e316a, type: 3}
+  shootPoint: {fileID: 8350002204579724382}
 --- !u!1 &4738595941654599573
 GameObject:
   m_ObjectHideFlags: 0
@@ -776,6 +778,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 7176357939055871691, guid: 1dee54f9447b75347988b5f652a71830, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.17
+      objectReference: {fileID: 0}
     - target: {fileID: 8350002205114649956, guid: 1dee54f9447b75347988b5f652a71830, type: 3}
       propertyPath: m_Name
       value: Muzzle
@@ -794,11 +800,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8350002205114649959, guid: 1dee54f9447b75347988b5f652a71830, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.19
       objectReference: {fileID: 0}
     - target: {fileID: 8350002205114649959, guid: 1dee54f9447b75347988b5f652a71830, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.62
       objectReference: {fileID: 0}
     - target: {fileID: 8350002205114649959, guid: 1dee54f9447b75347988b5f652a71830, type: 3}
       propertyPath: m_LocalRotation.w

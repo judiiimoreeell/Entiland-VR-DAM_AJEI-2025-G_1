@@ -16,6 +16,9 @@ public class Weapon : MonoBehaviour
     public AudioClip shootSound;
     public float shootVolume = 1f;
 
+    public GameObject bala;
+
+    public Transform shootPoint;
     private void Start()
     {
         if (body == null && GetComponent<Rigidbody>() != null)
@@ -40,9 +43,10 @@ public class Weapon : MonoBehaviour
                 
             }
             DianaNormal d = hit.collider.gameObject.GetComponent<DianaNormal>();
+
             if (d)
             {
-                d.Damage();
+                //d.Damage();
 
 
 
@@ -50,6 +54,10 @@ public class Weapon : MonoBehaviour
         }
         else
             Debug.DrawRay(barrelTip.position, barrelTip.forward * range, Color.red, 1);
+
+
+
+        GameObject balaInstance = Instantiate(bala, shootPoint.position, shootPoint.rotation);
 
         body.AddForce(barrelTip.transform.up * recoilPower * 5, ForceMode.Impulse);
     }

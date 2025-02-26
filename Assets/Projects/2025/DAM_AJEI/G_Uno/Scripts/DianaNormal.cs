@@ -25,11 +25,13 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Uno {
             if(!die)
             {
                 die = true;
-                Destroy(gameObject, 1);
+                GameObject dr = Instantiate(GameManager.Instance.dianaRota, transform.position, transform.rotation);
+                //Destroy(dr, 1);
                 GameManager.Instance.AddPoints(points);
                 //body.useGravity = true;
                 body.isKinematic = false;
                 transform.parent = null;
+                Destroy(gameObject);
 
             }
         }
