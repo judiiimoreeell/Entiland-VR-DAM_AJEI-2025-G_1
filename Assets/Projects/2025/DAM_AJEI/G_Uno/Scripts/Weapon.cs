@@ -62,7 +62,7 @@ public class Weapon : MonoBehaviour
         GameObject balaInstance = Instantiate(bala, shootPoint.position, shootPoint.rotation);
         balaInstance.GetComponent<Rigidbody>().AddForce(balaInstance.transform.forward * 1000);
         Destroy(balaInstance, 5);
-        body.AddForce(barrelTip.transform.up * recoilPower * 5, ForceMode.Impulse);
+        body.AddForce(-barrelTip.transform.up * recoilPower * 5, ForceMode.Impulse);
     }
 }
 
