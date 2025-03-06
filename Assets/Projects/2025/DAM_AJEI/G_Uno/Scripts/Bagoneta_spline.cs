@@ -16,7 +16,7 @@ public class Bagoneta_spline : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(contador <= 5)
+        if(contador <= 20)
         {
             contador += Time.deltaTime;
         }
