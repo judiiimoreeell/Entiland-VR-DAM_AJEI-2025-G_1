@@ -18,7 +18,7 @@ public class TriggetSpawnWeapon : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Pistol"))
+        if (other.gameObject.CompareTag("Obstacle"))
         {
             other.gameObject.transform.position = spawner.position;
         }

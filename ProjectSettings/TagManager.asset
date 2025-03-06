@@ -7,7 +7,6 @@ TagManager:
   - Teleport
   - Obstacle
   - Objective
-  - Pistol
   layers:
   - Default
   - TransparentFX
