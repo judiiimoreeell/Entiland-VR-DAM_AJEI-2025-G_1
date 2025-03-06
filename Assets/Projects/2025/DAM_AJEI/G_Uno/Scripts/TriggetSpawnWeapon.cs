@@ -21,6 +21,7 @@ public class TriggetSpawnWeapon : MonoBehaviour
         if (other.gameObject.CompareTag("Obstacle"))
         {
             other.gameObject.transform.position = spawner.position;
+            other.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
 
 
