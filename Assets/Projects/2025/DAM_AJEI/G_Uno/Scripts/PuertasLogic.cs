@@ -11,6 +11,7 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Uno
         public float puntuationDoor1 = 100f;
         public float rotationSpeed = 90f;
         private bool isDoorOpen = false;
+        public Collider triggerResetPlayer;
 
         void Start()
         {
@@ -30,7 +31,7 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Uno
         {
             float targetRotation = -90f;
             float currentRotation = 0f;
-
+            triggerResetPlayer.enabled = false;
             while (currentRotation > targetRotation)
             {
                 puerta.Rotate(Vector3.up, -rotationSpeed * Time.deltaTime);
