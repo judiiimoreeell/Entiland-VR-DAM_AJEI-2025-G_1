@@ -2,67 +2,69 @@ using EntilandVR.DosCinco.DAM_AJEI.G_Uno;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class Weapon : MonoBehaviour
+namespace EntilandVR.DosCinco.DAM_AJEI.G_Uno
 {
-    public Rigidbody body;
-
-    public Transform barrelTip;
-    public float hitPower = 1;
-    public float recoilPower = 1;
-    public float range = 100;
-    public LayerMask layer;
-
-    public AudioClip shootSound;
-    public float shootVolume = 1f;
-
-    public GameObject bala;
-
-    public Transform shootPoint;
-
-    public float shootPower = 1000;
-    private void Start()
+    public class Weapon : MonoBehaviour
     {
-        if (body == null && GetComponent<Rigidbody>() != null)
-            body = GetComponent<Rigidbody>();
-    }
+        public Rigidbody body;
 
-    public void Shoot()
-    {
-        //Play the audio sound
-        if (shootSound)
-            AudioSource.PlayClipAtPoint(shootSound, transform.position, shootVolume);
+        public Transform barrelTip;
+        public float hitPower = 1;
+        public float recoilPower = 1;
+        public float range = 100;
+        public LayerMask layer;
 
-        RaycastHit hit;
-        if (Physics.Raycast(barrelTip.position, barrelTip.forward, out hit, range, layer))
+        public AudioClip shootSound;
+        public float shootVolume = 1f;
+
+        public GameObject bala;
+
+        public Transform shootPoint;
+
+        public float shootPower = 1000;
+        private void Start()
         {
-            //var hitBody = hit.transform.GetComponent<Rigidbody>();
-            //if (hitBody != null)
-            {
-                //Debug.DrawRay(barrelTip.position, (hit.point - barrelTip.position), Color.green, 5);
-                //hitBody.GetComponent<Smash>()?.DoSmash();
-                //hitBody.AddForceAtPosition((hit.point - barrelTip.position).normalized * hitPower * 10, hit.point, ForceMode.Impulse);
-                
-            }
-            DianaNormal d = hit.collider.gameObject.GetComponent<DianaNormal>();
-
-            if (d)
-            {
-                //d.Damage();
-
-
-
-            }
+            if (body == null && GetComponent<Rigidbody>() != null)
+                body = GetComponent<Rigidbody>();
         }
-        else
-            Debug.DrawRay(barrelTip.position, barrelTip.forward * range, Color.red, 1);
+
+        public void Shoot()
+        {
+            //Play the audio sound
+            if (shootSound)
+                AudioSource.PlayClipAtPoint(shootSound, transform.position, shootVolume);
+
+            RaycastHit hit;
+            if (Physics.Raycast(barrelTip.position, barrelTip.forward, out hit, range, layer))
+            {
+                //var hitBody = hit.transform.GetComponent<Rigidbody>();
+                //if (hitBody != null)
+                {
+                    //Debug.DrawRay(barrelTip.position, (hit.point - barrelTip.position), Color.green, 5);
+                    //hitBody.GetComponent<Smash>()?.DoSmash();
+                    //hitBody.AddForceAtPosition((hit.point - barrelTip.position).normalized * hitPower * 10, hit.point, ForceMode.Impulse);
+
+                }
+                DianaNormal d = hit.collider.gameObject.GetComponent<DianaNormal>();
+
+                if (d)
+                {
+                    //d.Damage();
 
 
 
-        GameObject balaInstance = Instantiate(bala, shootPoint.position, shootPoint.rotation);
-        balaInstance.GetComponent<Rigidbody>().AddForce(balaInstance.transform.forward * 1000);
-        Destroy(balaInstance, 5);
-        body.AddForce(-barrelTip.transform.up * recoilPower * 5, ForceMode.Impulse);
+                }
+            }
+            else
+                Debug.DrawRay(barrelTip.position, barrelTip.forward * range, Color.red, 1);
+
+
+
+            GameObject balaInstance = Instantiate(bala, shootPoint.position, shootPoint.rotation);
+            balaInstance.GetComponent<Rigidbody>().AddForce(balaInstance.transform.forward * 1000);
+            Destroy(balaInstance, 5);
+            body.AddForce(-barrelTip.transform.up * recoilPower * 5, ForceMode.Impulse);
+        }
     }
-}
 
+}
