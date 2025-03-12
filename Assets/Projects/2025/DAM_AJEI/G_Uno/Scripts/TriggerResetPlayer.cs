@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 namespace EntilandVR.DosCinco.DAM_AJEI.G_Uno
 {
-    public class TriggetSpawnWeapon : MonoBehaviour
+    public class TriggerResetPlayer : MonoBehaviour
     {
-        public Transform spawner;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -19,16 +20,16 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Uno
         }
         private void OnTriggerEnter(Collider other)
         {
+            print("Ha entrado");
+
             if (other.gameObject.CompareTag("Obstacle"))
             {
-                other.gameObject.transform.position = spawner.position;
-                other.gameObject.GetComponent<Rigidbody>().velocity = Vector3.zero;
+                print("AAA");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
-
-
-
-
         }
+
+
 
 
     }
