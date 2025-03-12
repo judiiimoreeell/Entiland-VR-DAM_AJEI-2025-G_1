@@ -18,6 +18,7 @@ public class Bagoneta_spline : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if(contador <= maxTimer)
         {
             contador += Time.deltaTime;
@@ -26,13 +27,17 @@ public class Bagoneta_spline : MonoBehaviour
         {
             spline.Container = newContainer;
             spline.Duration = 50f;
-
             spline.NormalizedTime = 0f;
-            spline.Play();
 
             contador = 0;
             maxTimer = 50f;
         }
+        
+    }
+    public void StartGame()
+    {
+        spline.Play();
+
 
     }
 }
