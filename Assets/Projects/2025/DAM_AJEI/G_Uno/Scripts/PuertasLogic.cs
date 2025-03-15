@@ -8,7 +8,7 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Uno
     {
         
         public Transform puerta;
-        public float puntuationDoor1 = 100f;
+        public float puntuationDoor = 100f;
         public float rotationSpeed = 90f;
         private bool isDoorOpen = false;
         public Collider triggerResetPlayer;
@@ -20,7 +20,7 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Uno
 
         void Update()
         {
-            if (GameManager.Instance.puntuación >= puntuationDoor1 && !isDoorOpen)
+            if (GameManager.Instance.puntuación >= puntuationDoor && !isDoorOpen)
             {
                 StartCoroutine(OpenDoor());
                 isDoorOpen = true;
