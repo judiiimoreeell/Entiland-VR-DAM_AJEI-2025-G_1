@@ -25,7 +25,9 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Uno
             if (other.gameObject.CompareTag("Obstacle"))
             {
                 print("AAA");
+                GameManager.Instance.puntuación = 0;
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
             }
         }
 

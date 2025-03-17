@@ -61,7 +61,7 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Uno
 
 
             GameObject balaInstance = Instantiate(bala, shootPoint.position, shootPoint.rotation);
-            balaInstance.GetComponent<Rigidbody>().AddForce(balaInstance.transform.forward * 1000);
+            balaInstance.GetComponent<Rigidbody>().AddForce(balaInstance.transform.forward * shootPower);
             Destroy(balaInstance, 5);
             body.AddForce(-barrelTip.transform.up * recoilPower * 5, ForceMode.Impulse);
         }

@@ -22,7 +22,6 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Uno
             if(Instance == null)
             {
                 Instance = this;
-                DontDestroyOnLoad(gameObject);
             }
             else
             {
