@@ -14,11 +14,19 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Uno
 
         [Header("----- Audio Songs -----")]
         public AudioClip trackClip;
-        
+        public AudioClip IntroClip;
+        public AudioClip InicialLevel;
+        public AudioClip LaberintoClip;
 
         [Header("----- Audio Effects -----")]
-        public AudioClip Efectos1;
-       
+        public AudioClip woof;
+        public AudioClip Invisibilidad;
+        public AudioClip Nose;
+        public AudioClip Sniff;
+        public AudioClip ElfSound;
+        public AudioClip ElfSoundSawYou;
+        public AudioClip dogsad;
+        public AudioClip Puzzle;
         public static AudioManager Instance { get; private set; }
 
 
