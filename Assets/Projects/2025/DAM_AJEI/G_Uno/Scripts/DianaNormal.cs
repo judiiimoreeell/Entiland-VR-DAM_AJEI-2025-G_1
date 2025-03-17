@@ -25,7 +25,9 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Uno {
             if(!die)
             {
                 die = true;
+                AudioManager.Instance.PlaySFX(AudioManager.Instance.woof);
                 GameObject dr = Instantiate(GameManager.Instance.dianaRota, transform.position, transform.rotation);
+
                 dr.transform.localScale = gameObject.transform.localScale;
                 //Destroy(dr, 1);
                 GameManager.Instance.AddPoints(points);

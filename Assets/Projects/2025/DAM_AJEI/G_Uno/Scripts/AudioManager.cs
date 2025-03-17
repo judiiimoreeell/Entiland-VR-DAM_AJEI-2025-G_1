@@ -11,22 +11,15 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Uno
         [Header("----- Audio Source -----")]
         [SerializeField] public AudioSource musicSource;
         [SerializeField] public AudioSource SFXSource;
+        [SerializeField] public AudioSource VagonetaSound;
 
         [Header("----- Audio Songs -----")]
         public AudioClip trackClip;
-        public AudioClip IntroClip;
-        public AudioClip InicialLevel;
-        public AudioClip LaberintoClip;
+        
 
         [Header("----- Audio Effects -----")]
         public AudioClip woof;
-        public AudioClip Invisibilidad;
-        public AudioClip Nose;
-        public AudioClip Sniff;
-        public AudioClip ElfSound;
-        public AudioClip ElfSoundSawYou;
-        public AudioClip dogsad;
-        public AudioClip Puzzle;
+        
         public static AudioManager Instance { get; private set; }
 
 
@@ -40,7 +33,7 @@ namespace EntilandVR.DosCinco.DAM_AJEI.G_Uno
             }
 
             Instance = this;
-            DontDestroyOnLoad(gameObject);
+            
         }
 
         public void Start()
